@@ -18,7 +18,7 @@ const HomeScreen = () => {
         <Text style={[styles.title]}>Bienvenido/a ProFind</Text>
         <Text style={[styles.subtitle]}>Busca a miles de profesionales en tu zona</Text>
 
-        <TouchableOpacity style={styles.buttonlogin} onPress={() => router.push('/profile')}>
+        <TouchableOpacity style={styles.buttonlogin} onPress={() => router.push('/homePage')}>
           <Text style={[styles.buttonText]}>Iniciar Sesión</Text>
         </TouchableOpacity>
 
