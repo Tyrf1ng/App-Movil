@@ -34,8 +34,10 @@ const ProfileScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
+        <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+          <Ionicons name="arrow-back" size={24} color="#4F46E5" />
+        </TouchableOpacity>
         <View style={styles.headerTop}>
-          <Ionicons name="notifications-outline" size={24} color="#4F46E5" />
         </View>
       </View>
       <ScrollView style={styles.content}>
@@ -187,6 +189,27 @@ const styles = StyleSheet.create({
     color: '#4F46E5',
     fontWeight: '600',
   },
+
+  backButton: {
+    position: 'absolute',
+    top: 20,
+    left: 20,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: '#E0E7FF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  
 });
 
 export default ProfileScreen;
